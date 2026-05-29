@@ -13,6 +13,7 @@
     "react-hot-toast": "^2.4.1",
     "framer-motion": "^10.16.16",
     "lucide-react": "^0.294.0",
+    "react-intersection-observer": "^9.5.3",
     "ajv": "^8.12.0"
   },
   "devDependencies": {
