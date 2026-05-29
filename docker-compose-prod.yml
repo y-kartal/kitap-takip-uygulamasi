@@ -19,7 +19,7 @@ services:
       retries: 5
 
   backend:
-    image: ykartal/kitap-backend:latest
+    image: yasinkartal/kitap-backend:latest
     container_name: kitap-test-backend-prod
     env_file:
       - ./backend/.env
@@ -39,7 +39,7 @@ services:
     restart: unless-stopped
 
   frontend:
-    image: ykartal/kitap-frontend:latest
+    image: yasinkartal/kitap-frontend:latest
     container_name: kitap-test-frontend-prod
     ports:
       - "3002:80"

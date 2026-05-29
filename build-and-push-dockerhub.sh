@@ -3,7 +3,7 @@
 # Docker Hub'a image'ları build ve push etme scripti
 
 # Değişkenler
-DOCKERHUB_USERNAME="ykartal"  # Docker Hub kullanıcı adınızı buraya yazın
+DOCKERHUB_USERNAME="yasinkartal"
 VERSION="v2.0"
 
 # Image isimleri
