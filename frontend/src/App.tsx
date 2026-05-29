@@ -9,7 +9,7 @@ import Statistics from './pages/Statistics';
 import Settings from './pages/Settings';
 import Layout from './components/Layout';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
 const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { isAuthenticated } = useAuth();

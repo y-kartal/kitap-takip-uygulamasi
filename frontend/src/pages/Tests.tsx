@@ -224,10 +224,10 @@ const Tests: React.FC = () => {
             <p className="text-5xl font-bold">
               {statistics.totalTests > 0
                 ? Math.round(
-                    Object.values(statistics.subjectStats).reduce(
+                    (Object.values(statistics.subjectStats).reduce(
                       (sum: number, stat: any) => sum + stat.averageSuccess,
                       0
-                    ) / Object.keys(statistics.subjectStats).length
+                    ) as number) / Object.keys(statistics.subjectStats).length
                   )
                 : 0}
               %
