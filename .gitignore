@@ -7,7 +7,7 @@ node_modules/
 .env.local
 .env.*.local
 backend/.env
-
+*.md
 # Build outputs
 dist/
 build/

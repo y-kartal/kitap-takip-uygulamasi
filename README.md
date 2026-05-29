@@ -1,159 +1,242 @@
-# 📚 Kitap ve Test Takip Uygulaması
+# 📚 Kitap Takip Uygulaması - Version 2.0
 
-8 yaşındaki çocuklar için tasarlanmış modern, renkli ve kullanıcı dostu bir kitap ve test takip uygulaması.
+> Kitaplarını ve testlerini takip et, hedeflerini belirle, istatistiklerini gör! 🎯
+
+[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/y-kartal/kitap-takip-uygulamasi)
+[![Docker](https://img.shields.io/badge/docker-ready-brightgreen.svg)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+## 🌟 Version 2.0 - Yeni Özellikler
+
+### 🎨 Görsel İyileştirmeler
+- ✨ **Karanlık Mod Geçiş Butonu** - Sağ üst köşede güneş/ay ikonu ile kolay geçiş
+- 📊 **Animasyonlu İstatistikler** - Dashboard'da sayılar yukarı doğru sayarak artıyor
+- 🎨 **Kitap Kapağı Placeholder** - Kapak resmi olmayan kitaplar için renkli gradient arka planlar
+- 🖱️ **Gelişmiş Hover Efektleri** - Kartlara hover'da animasyonlu gölge ve yükselme efekti
+
+### 📊 Yeni Sayfalar
+- **İstatistikler Sayfası**
+  - 📈 Aylık/yıllık okunan kitap grafikleri
+  - 🎭 Tür dağılımı analizi
+  - ⚡ Ortalama okuma hızı (sayfa/saat)
+  - 📖 Toplam okunan sayfa sayısı
+  - 🎯 Yıllık hedef takibi
+
+- **Ayarlar Sayfası**
+  - 👤 Profil özelleştirme
+  - 🎨 5 farklı tema rengi (Mor, Mavi, Yeşil, Pembe, Turuncu)
+  - 🎯 Günlük/yıllık okuma hedefleri
+  - 📚 Favori türler yönetimi
+
+### 🔍 Kitaplar Sayfası İyileştirmeleri
+- 🔎 **Arama** - Kitap adına göre anlık arama
+- 🎚️ **Filtreleme** - Puana göre filtreleme (5⭐, 4+⭐, 3+⭐)
+- 📊 **Sıralama** - İsim, sayfa sayısı, puan, tarihe göre sıralama
+- 🎨 **Renkli Placeholder** - Kapak resmi olmayan kitaplar için baş harflerle gradient
+
+## 🚀 Hızlı Başlangıç
+
+### Gereksinimler
+- Docker & Docker Compose
+- Git
+
+### Kurulum
+
+```bash
+# Repo'yu klonla
+git clone https://github.com/y-kartal/kitap-takip-uygulamasi.git
+cd kitap-takip-uygulamasi
+
+# V2 branch'ine geç
+git checkout v2-development
+
+# V2'yi başlat
+docker-compose -f docker-compose-v2.yml up -d --build
+```
+
+### Erişim
+- **Frontend**: http://localhost:3001
+- **Backend API**: http://localhost:5001
+- **Database**: localhost:5433
+
+### Varsayılan Kullanıcı
+- **Kullanıcı Adı**: `vera`
+- **Şifre**: `03022018`
+
+## 📦 Branch Yapısı
+
+### `main` - Version 1.0 (Stabil)
+- Temel kitap takip özellikleri
+- Test takip sistemi
+- Başarı rozetleri
+- Okuma serileri
+- **Port**: 3000 (frontend), 5000 (backend), 5432 (db)
+
+### `v2-development` - Version 2.0 (Yeni Özellikler)
+- Tüm V1 özellikleri +
+- 5 tema rengi sistemi
+- İstatistikler sayfası
+- Ayarlar sayfası
+- Arama & filtreleme
+- Gelişmiş animasyonlar
+- **Port**: 3001 (frontend), 5001 (backend), 5433 (db)
 
 ## 🎯 Özellikler
 
-### 📖 Kitap Takip
-- ✅ Kitap ekleme ve kapak fotoğrafı yükleme
-- ✅ Sayfa ilerlemesi takibi
-- ✅ Otomatik süre hesaplama
-- ✅ Sürükle-bırak ile kategori değiştirme
-- ✅ 5 yıldız rating sistemi
-- ✅ İlerleme göstergeleri ve grafikler
-- ✅ Kitap tamamlama kutlaması
+### 📚 Kitap Yönetimi
+- ✅ Kitap ekleme/düzenleme/silme
+- ✅ Kapak resmi yükleme
+- ✅ Drag & drop ile durum değiştirme (Okunacak → Okuyor → Bitti)
+- ✅ İlerleme takibi (sayfa bazında)
+- ✅ Hedef tarih belirleme
+- ✅ Puan verme (5 yıldız sistemi)
+- ✅ Notlar ekleme
+- ✅ Tamamlanma süresi hesaplama
 
-### 📝 Test Takip
-- ✅ Ders bazlı test girişi (Türkçe, Matematik, Hayat Bilgisi, İngilizce)
-- ✅ Otomatik net hesaplama
-- ✅ Başarı yüzdesi takibi
-- ✅ Ders bazlı grafikler
-- ✅ Haftalık ve aylık raporlar
+### 📝 Test Takibi
+- ✅ Test sonuçları girişi
+- ✅ Net hesaplama
+- ✅ Başarı yüzdesi
+- ✅ Ders bazlı analiz
+- ✅ Grafik gösterimi
 
-### 🎮 Motivasyon Sistemi
-- ✅ Rozet ve kazanım sistemi
-- ✅ Günlük okuma serisi
-- ✅ Başarı ödülleri
+### 🏆 Başarı Sistemi
+- ✅ Otomatik rozet kazanma
+- ✅ Okuma serileri takibi
 - ✅ Motivasyon mesajları
+- ✅ İlerleme göstergeleri
 
-### 🎨 Tasarım
-- ✅ Çocuk dostu renkli arayüz
-- ✅ Büyük ikonlar ve butonlar
-- ✅ Emoji desteği
-- ✅ Karanlık mod
-- ✅ Animasyonlar
+### 📊 İstatistikler (V2)
+- ✅ Aylık kitap grafikleri
+- ✅ Tür dağılımı
+- ✅ Okuma hızı analizi
+- ✅ Yıllık hedef takibi
 
-## 🚀 Kurulum
+### ⚙️ Kişiselleştirme (V2)
+- ✅ 5 farklı tema rengi
+- ✅ Karanlık/aydınlık mod
+- ✅ Profil özelleştirme
+- ✅ Hedef belirleme
 
-### Gereksinimler
-- Docker
-- Docker Compose
+## 🛠️ Teknolojiler
 
-### Tek Komutla Başlatma
+### Frontend
+- React 18 + TypeScript
+- Tailwind CSS
+- Framer Motion (animasyonlar)
+- React Beautiful DnD (drag & drop)
+- React Hot Toast (bildirimler)
+- Lucide React (ikonlar)
+
+### Backend
+- Node.js + Express
+- TypeScript
+- TypeORM
+- PostgreSQL
+- JWT Authentication
+- Multer (dosya yükleme)
+- Node-cron (zamanlanmış görevler)
+
+### DevOps
+- Docker & Docker Compose
+- Nginx (reverse proxy)
+- Multi-stage builds
+
+## 📖 Kullanım
+
+### V1 ve V2'yi Birlikte Çalıştırma
 
 ```bash
-docker compose up -d
+# V1'i başlat
+docker-compose up -d
+
+# V2'yi başlat
+docker-compose -f docker-compose-v2.yml up -d
+
+# Her iki versiyon da çalışıyor!
+# V1: http://localhost:3000
+# V2: http://localhost:3001
 ```
 
-Uygulama otomatik olarak başlayacak:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000
-- **Database**: PostgreSQL (port 5432)
+### Logları İzleme
 
-### İlk Giriş
-- **Kullanıcı Adı**: vera
-- **Şifre**: 03022018
-
-## 📁 Proje Yapısı
-
-```
-.
-├── backend/                 # Node.js + Express + TypeScript
-│   ├── src/
-│   │   ├── controllers/    # API controllers
-│   │   ├── models/         # Database models
-│   │   ├── routes/         # API routes
-│   │   ├── middleware/     # Auth & validation
-│   │   └── utils/          # Helper functions
-│   ├── uploads/            # Kitap kapak resimleri
-│   └── Dockerfile
-│
-├── frontend/               # React + TypeScript + TailwindCSS
-│   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── pages/         # Page components
-│   │   ├── services/      # API services
-│   │   ├── hooks/         # Custom hooks
-│   │   └── utils/         # Helper functions
-│   └── Dockerfile
-│
-└── docker-compose.yml     # Docker orchestration
-```
-
-## 🛠️ Geliştirme Modu
-
-Backend geliştirme:
 ```bash
-cd backend
-npm install
-npm run dev
+# V2 logları
+docker-compose -f docker-compose-v2.yml logs -f
+
+# Sadece backend logları
+docker-compose -f docker-compose-v2.yml logs -f backend
 ```
 
-Frontend geliştirme:
+### Durdurma
+
 ```bash
-cd frontend
-npm install
-npm start
+# V2'yi durdur
+docker-compose -f docker-compose-v2.yml down
+
+# Veritabanı ile birlikte sil
+docker-compose -f docker-compose-v2.yml down -v
 ```
 
-## 📊 Veritabanı
+## 📸 Ekran Görüntüleri
 
-PostgreSQL kullanılmaktadır. Veriler Docker volume'de saklanır ve container silinse bile kaybolmaz.
+### Dashboard
+- Hoş geldin mesajı
+- Günlük hedef göstergesi
+- Okunan kitaplar
+- Son testler
+- Başarı rozetleri
 
-### Volume'ler
-- `postgres_data`: Veritabanı verileri
-- `uploads`: Yüklenen kitap kapak resimleri
+### Kitaplar (V2)
+- Arama çubuğu
+- Filtreleme seçenekleri
+- Drag & drop kolonlar
+- Renkli placeholder'lar
+- Bitirilen kitaplar tablosu
 
-## 🔄 Yedekleme
+### İstatistikler (V2)
+- Yıllık hedef göstergesi
+- Aylık kitap grafikleri
+- Tür dağılımı
+- Okuma hızı kartı
 
-Veritabanı yedeği almak için:
-```bash
-docker exec kitap-test-db pg_dump -U kitapapp kitap_test_db > backup.sql
-```
+### Ayarlar (V2)
+- Profil bilgileri
+- Tema rengi seçimi
+- Okuma hedefleri
+- Favori türler
 
-Yedeği geri yüklemek için:
-```bash
-docker exec -i kitap-test-db psql -U kitapapp kitap_test_db < backup.sql
-```
+## 🔜 Gelecek Özellikler
 
-## 📱 Kullanım
+- 📖 Alıntılar bölümü
+- ⏱️ Okuma zamanlayıcı (Pomodoro)
+- 🏆 Daha fazla rozet ve başarılar
+- 📱 Gelişmiş mobil optimizasyon
+- 🔔 Bildirimler sistemi
+- 👥 Sosyal özellikler
+- 📚 Kitap kulübü
 
-1. **Dashboard**: Ana sayfa, genel istatistikler ve son aktiviteler
-2. **Kitaplarım**: Kitap ekleme, düzenleme ve takip
-3. **Testlerim**: Test girişi ve analiz
-4. **Rozetlerim**: Kazanılan başarılar
-5. **Raporlar**: Detaylı istatistikler ve grafikler
+## 🤝 Katkıda Bulunma
 
-## 🎨 Özelleştirme
+1. Fork yapın
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit yapın (`git commit -m 'feat: Add amazing feature'`)
+4. Push yapın (`git push origin feature/amazing-feature`)
+5. Pull Request açın
 
-### Renk Teması
-`frontend/src/index.css` dosyasından renkleri özelleştirebilirsiniz.
+## 📝 Lisans
 
-### Dersler
-`backend/src/models/Test.ts` dosyasından ders listesini güncelleyebilirsiniz.
+Bu proje MIT lisansı altında lisanslanmıştır.
 
-## 🐛 Sorun Giderme
+## 👤 Geliştirici
 
-Container'ları yeniden başlatma:
-```bash
-docker compose restart
-```
+**Yasin Kartal**
+- GitHub: [@y-kartal](https://github.com/y-kartal)
 
-Logları görüntüleme:
-```bash
-docker compose logs -f
-```
+## 🙏 Teşekkürler
 
-Tüm container'ları silip yeniden başlatma:
-```bash
-docker compose down
-docker compose up -d --build
-```
+Bu projeyi kullandığınız için teşekkürler! ⭐ vermeyi unutmayın!
 
-## 📄 Lisans
+---
 
-Bu proje kişisel kullanım için geliştirilmiştir.
-
-## 💝 Kızınıza İyi Okumalar!
-
-Uygulama, çocuğunuzun okuma ve öğrenme alışkanlıklarını eğlenceli bir şekilde takip etmesine yardımcı olacak şekilde tasarlanmıştır. Başarılar! 🎉
+Made with 💖 for young readers
