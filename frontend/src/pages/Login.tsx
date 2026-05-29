@@ -78,12 +78,6 @@ const Login: React.FC = () => {
               {loading ? '⏳ Giriş yapılıyor...' : '🚀 Giriş Yap'}
             </button>
           </form>
-
-          <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl">
-            <p className="text-sm text-blue-800 dark:text-blue-200 text-center">
-              💡 <strong>İpucu:</strong> Kullanıcı adı: <code className="font-mono bg-white dark:bg-gray-700 px-2 py-1 rounded">vera</code>, Şifre: <code className="font-mono bg-white dark:bg-gray-700 px-2 py-1 rounded">03022018</code>
-            </p>
-          </div>
         </div>
 
         <div className="mt-8 text-center">
